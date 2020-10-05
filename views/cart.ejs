@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+<% if(hasDestination){ %>
+<h1 class="cart-title">Votre choix</h2>
+  <table id="cart-container">
+    <thead>
+      <tr>
+        <th  scope="col">Planète</th>
+        <th  scope="col">Nombre de personne</th>
+        <th  scope="col">Dates sélectionnées</th>
+        <th  scope="col">Durée</th>
+        <th  scope="col">Prix Total</th>
+    </thead>
+
+    <tbody>
+      <% cartProducts.forEach(function(cartProduct) { %>
+        <tr>
+          <td><%= cartProduct.planet%></td>
+          <% days.forEach(function(day) { %>
+          <td><%= day.users%></td>
+          <% }); %>
+          <% days.forEach(function(day) { %>
+          <td><%= day.dates%></td>
+          <% }); %>
+          <td><%= cartProduct.duration%> jours</td>
+
+         <% totalPrice=cartProduct.price * qty %>
+        <td><%= totalPrice %></td>
+       
+        
+      
+         
+
+
+        </tr>
+
+<% }); %>
+<form   method = "POST" action="/panier">
+  <button type="submit" class="btn">Supprimer</button>
+  <label for="cgv" required><a href="/CGV">Accepter les conditions générales de vente</a><input type="checkbox"  id="cgv"></label>
+  
+</form> 
+<% }else{ %>
+    <div id="emptyCart">
+
+      
+      <h1 class="emptyCart-title">Pas de réservation en cours!</h1>
+    </div>
+  </tbody>
+  <% } %>
+</table> 
+
+
+
+
+
+
+
+
+
+
+
+<button type="button" id="btn-fin "class="btn"><a href="/panier/fin">page fin</a></button>
+<%- include('partials/footer') %>

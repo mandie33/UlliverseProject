@@ -1,0 +1,143 @@
+:root{
+    --font-family-link:'Fugaz One', cursive;
+    --font-family-title:'Bungee Shade', cursive;
+    --font-family-text:'Lato', sans-serif;
+    --font-family-secondary-title:'Righteous', cursive;
+    --font-bold:bolder;
+    --centered:center;
+    --secondary-bg-color:#D9D9D9;
+    --secondary-text-color:#21243d;
+    --main-titles-color:#ffc60b;
+    --font-size--tags:1.4rem;
+    --success-alert-color:#42b883;
+    --fail-alert-color:#c81912;
+    --warning-alert-color:#ffc60b;
+    --width-btn:max-content;
+    --border-radius-alert-input:6px;
+  
+ } 
+
+/*TEXTES*/
+h1 { 
+    font-family: var( --font-family-title);
+    color:  var(--main-titles-color);
+    text-align: var(--centered);
+    grid-column: 2;
+    grid-row: 1;
+} 
+
+.title-connexion{
+    align-self:start ;
+}
+.cgupc-title{
+    font-family:  var( --font-family-secondary-title);
+   
+} 
+.ancre{
+    color: var(--main-titles-color);
+}
+h2{
+    font-size: 1.7rem;
+ }
+ h2,h3 {
+font-family: var(--font-family-secondary-title);
+text-align: var(--centered);
+}
+
+label,p,th,td,h4{
+    font-family: var( --font-family-text);
+    font-size: var(--font-size--tags);
+    text-align: var(--centered);
+    line-height: 1.5;
+}
+small{
+    font-family: var( --font-family-text);
+    font-size: 0.8rem;
+    text-align: var(--centered); 
+
+}
+a[href="/CGUPC"]{
+    font-size: 1rem;
+}
+.title-dest-descr{
+    display: inline;
+    
+}
+
+/** HOME PAGE**/
+#home-title {
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+}
+
+/*CONTACT REGISTER LOGIN FORMS*/
+  
+label {
+    display: block;
+}
+label.radio,input[radio]{
+    display: inline;
+}
+input,textarea {
+    font-family: var(--font-family-text);
+    font-size: 1.3rem;
+    padding-left: 3px;
+    border-radius: var(--border-radius-alert-input);
+    margin: 5px;
+    font-weight: var(--font-bold);
+}
+
+
+
+
+textarea{
+    outline: none;
+    border-radius: 20px;
+    line-height: 2;
+    overflow: auto;
+    width: 50vw;
+}
+
+#cgv{
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+}
+.list-dest-item,select{
+    font-family: var(--font-family-text);
+      margin:5px;
+      font-size: var(--font-size--tags);
+      list-style: none;
+      color:var(--secondary-text-color);
+}
+li{
+    color: black;
+    font-family:var(--font-family-text);
+    font-size: 1.4rem;
+}
+
+a[href="/CGV"]{
+    color:var(--secondary-text-color);
+    font-weight: var( --font-bold);
+}
+.alert-success,.alert-warning,.alert-fail{
+    grid-column: 2;
+    
+    background-color:var(--secondary-bg-color) ;
+    font-weight: var( --font-bold);
+    border-radius: var(--border-radius-alert-input);
+}
+.alert-warning{
+    color: var(--warning-alert-color);
+}
+
+.alert-success{
+    color: var(--success-alert-color);
+}
+.alert-fail{
+    color: var(--fail-alert-color);
+}
+/*PAGE FIN*/
+
+a[class="btn"]{
+    color:var( --secondary-text-color)
+}

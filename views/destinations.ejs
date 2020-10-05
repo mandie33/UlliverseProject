@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<% destinations.forEach(function(destination) { %>
+
+<div id="destination-container" ">
+ 
+  <h3 class="title-dest-descr"><%=destination.description %>
+  <img class="planetPicture" src="<%= src %>" alt="<%= alt %>">
+  </h3>
+  <div id="dest-container">
+
+    <form method="POST" action="/panier/destination"> 
+
+      <h2 name="planet">Planète: <%=destination.planet %></h2>
+      
+      <h3 >Lieu de visite: <%=destination.city %></h3>
+        <img  class="city" src="<%=city%>" alt="">
+      
+     
+
+      
+        <p name="nbUser">Pour <%=destination.nbUser %> personne </p>
+        <ul class="list-group list-group-flush">
+          <li class="list-dest-item" name="duration" ><strong>Durée du séjour: <%=destination.duration %> jours</strong></li> 
+          <li class="list-dest-item"><small class="text-muted">il ne reste que 3 dates disponibles</small></li>
+        </ul>
+
+        <select id="dates" name="dates" >
+          <optgroup label="Dates disponibles">
+            <%  let dates=["22/09/2021-29/09/2021","01/10/2021-08/10/2021","25/10/2021-01/11/2021"] %>
+            <% dates.forEach(function(date){ %>
+              <option name="<%=date%>"><%=date %></option>
+            <% }) %>
+          </optgroup>
+        </select>
+          
+        <label>Nombre de voyageur:</label>
+        <select  id="users" name="users" >
+          <optgroup label="Nombre de personne">
+            <%  let users=[1,2,3,4] %>
+            <% users.forEach(function(user){ %>
+              <option name="<%=user%>"><%=user %></option>
+              <% }) %>
+            </optgroup>
+          </select>
+
+        
+       
+        <p class="list-dest-item"  ><strong>Prix par voyageur: <%= destination.price %>euros</strong></p> 
+        
+     
+          
+          
+      
+      <input type="hidden" name="destinationId" value= <%= destination.id %> >
+      <button type="submit" class="btn">Réserver</button>
+    </form>
+  </div>
+</div>
+<% }) %>
+</div>
+<!-- <script src="../javascript/dest.js"></script> -->
+
+
+
+<%- include("partials/footer") %>.

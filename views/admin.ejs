@@ -1,0 +1,43 @@
+<%- include('partials/headerAdmin') %>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Espace admin</h1>
+     
+    </div>
+  </div>
+
+  <form action="admin/add-product" method="POST">
+    <div class="form-group">
+      <label for="destinationId">Référence</label>
+      <input type="number" id="destinationId"  name="destinationId">
+    </div>
+    <div class="form-group">
+      <label for="planet">Planète</label>
+      <input type="text" id="planète"  name="planet">
+    </div>
+    <div class="form-group">
+      <label for="city">Ville</label>
+      <input type="text" id="city" name="city" >
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" >
+      </div>
+ 
+    <label for="personne">Nombre de personne</label>
+        <input type="number" id="personne" name="nbUser" >
+      </div>
+      <div class="form-group">
+        <label for="duree">Durée</label>
+        <input type="number" id="duree" name="duration" >
+      </div>
+      <div class="form-group">
+        <label for="prixTotal">Prix total</label>
+        <input type="number" id="prixTotal" name="totalPrice" >
+      </div>
+      
+        <button type="submit" class="btn btn-dark btn-lg">Ajouter destination</button>
+      
+  </form>
+
+<%- include('partials/footer') %>

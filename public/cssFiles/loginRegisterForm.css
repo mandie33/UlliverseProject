@@ -1,0 +1,46 @@
+#login-container,#register-container{
+    display: grid;
+    grid-template-columns: repeat(3,33%) ;
+    grid-template-rows: 10%,70%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    height: 78vh;
+    background-image: url("../images/project.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+h1{
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+.title-connexion{
+    align-self:start ;
+}
+
+.formEC1{
+    grid-column: 2;
+    grid-row: 2;
+    /* background-image: url("../images/project.png"); */
+}
+.formEC{
+    grid-row: 1;
+    grid-column: 2;
+}
+.formEC1>label, .formEC>label{
+    color:#010A26;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+#cgv{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+
+
+

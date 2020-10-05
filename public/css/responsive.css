@@ -1,0 +1,122 @@
+@media screen and (max-width:560px){
+    html {
+        height: max-content;
+    }
+/*HEADER-FOOTER */   
+    nav,footer{
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        align-items: baseline;
+        height: max-content;
+    }
+    
+
+    span,a{
+        font-size: 1.1rem;
+    }
+
+    #logo {
+        display: none;
+    }
+   
+/*TEXTES*/
+
+#home-title {
+   
+    font-size: 1.3rem;
+}
+h1{
+    font-size: 1.3rem;;
+}
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+ }
+
+small,label,p,th,td{
+    font-size: 1.1rem;;
+    line-height: 1.5;
+}
+input,textarea {
+    
+    font-size: 1rem;
+    padding-left: 3px;
+    margin: 5px;
+}
+
+textarea{
+    
+    width: 50vw;
+}
+
+#cgv{
+    font-size: 0.8rem;
+   
+}
+.list-dest-item,select{
+    font-size: 1.2rem;
+      margin:5px;
+}
+li{
+    
+    font-size: 1rem;
+}
+.title-dest-descr{
+    display: none;
+}
+/*IMAGES RESPONSIVES*/
+img,.soon {
+    
+    width: 100px;
+    height: 100px;
+   
+} 
+
+h3+.planetPicture {
+    display: none;
+}
+.city {
+    width:150px;
+    height:100px;
+}
+
+.background-image{
+    background-image: url("../images/planet.png");
+    background-position: 47% 80%;
+    border-radius: 0%;
+}
+/*LAYOUTS */
+
+#destination-container{
+    width: 100vw;
+    height: 100vh;
+    align-items: initial;
+} 
+#dest-container{
+grid-column: 1/span 3;
+height: 80vh;
+margin-bottom: 20px;
+    }
+    #login-container,#register-container{
+        background-size: 350px;
+        margin-bottom: 20px;
+    }
+    #end-container{
+        background-image: url("../images/planet.png");
+        background-position: 47% 40%;
+    }   
+
+/*BUTTONS*/
+    #backtotop{
+        height:2rem;
+        height:max-content;
+    } 
+    .btn {
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    }
+
+}

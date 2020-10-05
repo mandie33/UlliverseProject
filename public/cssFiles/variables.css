@@ -1,0 +1,22 @@
+:root{
+    --main-bg-color:#fafafa;
+    --secondary-bg-color:#D9D9D9;
+    --nav-bg-color:#21243d;
+    --link-color:#F2B5A7;
+    --secondary-link-color:#21243d;
+    --main-titles-color:#ffc60b;
+    --main-bg-color-btn:#ffc60b;
+    --font-family-link:'Fugaz One', cursive;
+    --font-family-title:'Bungee Shade', cursive;
+    --font-family-text:'Lato', sans-serif;
+    --font-family-secondary-title:'Righteous', cursive;
+    --font-bold:bolder;
+    --centered:center;
+    --font-size--tags:1.4rem;
+    --success-alert-color:#42b883;
+    --fail-alert-color:#c81912;
+    --warning-alert-color:#ffc60b;
+    --width-btn:max-content;
+    --border-radius-alert-input:6px;
+    --flex-end:flex-end;
+ }

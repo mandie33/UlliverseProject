@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+
+<main id="homePage-container">
+<div id="slogan">
+
+
+<% textes.forEach(function(texte) { %>
+    <h1 id="home-title">Ulliverse Travel Agency</h1>
+    <h2><%=texte.slogan %></h2>
+    <h2>Découvrez en exclusivité nos destinations phares pour des vacances inattendues!</h3>
+</div>
+    
+
+<div id="txt-one">
+  <!-- <div class="card"> -->
+    <h3 class="card-title"><%=texte.titleOne %></h3>
+    <img src="images/naboo-planet.jpg"  alt="planète Naboo" class="card">
+    
+      <p class="card-text"><%=texte.textOne %></p>
+      <a href="/destinations/tatooine">Par ici</a>
+  </div>
+
+
+  <div id="txt-two">
+    <h3 class="card-title"><%=texte.titleTwo %></h3>
+    <img src="images/tatooine-planet.jpg"  alt="planète Tatooine" class="card">
+  
+  
+ 
+      <p class="card-text"><%=texte.textTwo %></p>
+      <a href="/destinations/tatooine">Par ici</a>
+
+
+  </div>
+
+  <div id="txt-three">
+    <h3 class="card-title"><%=texte.titleThree %></h3>
+    <img src="images/soon.jpg" class="soon" alt="A venir" class="card">
+  
+    
+    
+      <p class="card-text"><%=texte.textThree %></p>
+      <a href="/newsletter">Souscrire à la newsletter</a>
+  </div> 
+
+
+<div id="story">
+<h1>Notre histoire</h1> 
+
+  <p><%=texte.story %></p>
+
+<% }); %>
+</div>
+</main>
+
+<%- include('partials/footer') %>

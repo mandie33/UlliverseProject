@@ -1,0 +1,51 @@
+/**  HEADER et FOOTER **/
+nav,footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin:auto;
+}
+
+nav{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #21243d;
+    height:12vh;
+    justify-content: space-between;
+}
+footer {
+   
+    height:5vh;
+   
+    justify-content: space-evenly;
+  
+  
+    
+}
+footer>a{
+    color:#21243d;
+    font-size: 1.1rem;
+    align-self: flex-end;
+    
+
+}
+
+span,a{
+    color:#F2B5A7;
+    text-decoration: none;
+    padding-right: 20px;
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.4rem;
+}
+
+
+a:hover{
+    color:#9F88BF;
+}
+
+
+
+#logo {
+    width: 100px;
+    height: 80px;
+}

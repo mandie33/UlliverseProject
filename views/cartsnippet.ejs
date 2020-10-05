@@ -1,0 +1,100 @@
+<% if(hasDestination){ %>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Planet</th>
+        <th scope="col">Durée</th>
+        <th scope="col">Prix Total</th>
+  </thead>
+  <tbody>
+    <% destinations.forEach(function(destination) { %>
+    
+      <tr>
+      <td><%= destination.planet%></td>
+      <!-- <% days.forEach(function(day) { %> -->
+      <td><%= days.dates%></td>
+      <!-- <% }); %> -->
+      <td><%= destination.totalPrice%></td>
+      
+    </tr>
+    <% }); %>
+    </tbody>
+    <% }); %>
+  </table> 
+  <%} else {%>
+
+    <%}%>
+
+    <input type="hidden" name="destinationId" value= <%= destination.id %> >
+
+
+
+    <% if(hasDestination){ %>
+      <h1 class="cart-title">Votre choix</h2>
+      <table id="cart-container">
+        <thead>
+          <tr>
+            <th class="un" scope="col">Planète</th>
+            <th class="deux" scope="col">Nombre de personne</th>
+            <th class="trois" scope="col">Dates sélectionnées</th>
+            <th class="quatre" scope="col">Durée</th>
+            <th class="cinq" scope="col">Prix Total</th>
+       </thead>
+      
+      <tbody>
+       
+        <% cartProducts.forEach(function(cartProduct) { %>
+       
+          <tr>
+            
+          <td><%= cartProduct.planet%></td>
+          <td><%= cartProduct.nbUser%></td>
+          <% days.forEach(function(day) { %>
+          <td><%= day.dates%></td>
+          <% }); %>
+          <td><%= cartProduct.duration%> jours</td>
+          <td><%= cartProduct.totalPrice%> euros</td>
+          
+      
+         
+        </tr>
+      
+      <% }); %>
+      
+        <% }else{ %>
+        
+          <div id="emptyCart">
+            <h1 class="emptyCart-title">Pas de réservation en cours!</h1>
+          
+          </div>
+       
+        </tbody>
+        <% } %>
+      </table> 
+      
+      <% cartProduct.price * day.user %>
+      
+      <p class="list-dest-item"  ><strong>Prix par voyageur: <%= destination.price %>euros</strong></p> 
+          
+      <%totalPrice = 0%>
+
+          <%  days.forEach(function(user) { %>
+                  <%totalPrice += Number(user);%>
+                 <%})%>
+      
+      
+      <!-- <form method="POST" action="/reservation">
+      <button type="submit" class="btn btn-dark">Valider ma réservation</button>
+      </form> 
+      
+       
+      
+      
+      <form   method = "POST" action="/panier">
+        <button type="submit" class="btn btn-dark">Supprimer</button>
+      </form> -->
+      
+      
+      <button type="button" id="btn-fin "class="btn"><a href="/panier/fin">page fin</a></button>
+      <%- include('partials/footer') %>

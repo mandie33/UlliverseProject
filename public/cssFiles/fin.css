@@ -1,0 +1,20 @@
+/* body{
+    background-color: #D9D9D9;
+} */
+#end-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 88vh;
+    width: 100vw;
+    background-image: url("../images/planet4.png");
+    background-repeat: no-repeat;
+    background-position:30% 40%;
+    
+}
+
+
+.end-title{
+    color:#21243d;
+}

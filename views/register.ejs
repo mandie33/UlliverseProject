@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<div id="register-container">
+
+  
+<h1>1 ere connexion</h1>
+
+  <form action="/creationEspaceClient" method="POST" class="formRegister">
+          <label for="name">Votre nom</label>
+            <input type="text"  name="name" required >
+          
+          <label for="email">Email</label>
+            <input type="email"  name="email" required >
+                
+            <% if (message.length > 0){ %>
+              <div class="alert-warning">
+                <p><%= message %></p>
+              </div>
+                <%}%>    
+
+      <label for="password">Mot de passe</label>
+        <input type="password"  name="password" id="password"  minLength="8" maxlength="20" required>
+         
+      <label for="password">confirmation du mot de passe</label>
+      <input type="password"  name="passwordTwo" id="passwordTwo" minLength="8" maxlength="20" required>
+      <small id="txt"></small>
+            
+      <label for="cgv" id=cgv><a href="/CGUPC" target="_blank">Lire et accepter les conditions générales d'utilisation</a>
+        <input type="checkbox"  name="cgv" id=cgv required >
+      </label>
+          <span id="txt2"></span>
+           
+    
+        <button type="submit" class="btn">S'inscrire</button>
+
+      
+    </form>
+ 
+  </div>
+
+
+<script src="../javascript/registerControl.js" ></script>
+
+<%- include('partials/footer') %>

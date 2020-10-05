@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+
+<div id="login-container">
+
+
+
+  <h1 class="title-connexion">Se connecter</h1>
+
+
+<form action="/connexion" method="POST"class="formLogin">
+          
+<label for="email">Email</label>
+    <input type="email"  name="email" required>
+        
+            
+
+  <label for="password">Mot de passe</label>
+  <input type="password"  name="password" id="password" required>
+
+  <% if(mdp.length > 0){ %>
+    <div class="alert-fail">
+    <p><%= mdp %></p>
+    </div>
+  <%}%>  
+           
+
+             <div>
+            <button type="submit" class="btn btn-dark">Se connecter</button>
+            </div> 
+
+            <% if(message.length > 0){ %>
+              <div class="success-alert">
+              <p><%= message %></p>
+              </div>
+              <%}%>
+              <% if(msg.length > 0){ %>
+                <div class="alert-fail">
+                <p><%= msg %></p>
+              </div>
+                <%}%>
+         
+            <% if(deco.length > 0){ %>
+              <div class="warning-alert">
+              <p><%= deco %></p>
+            </div>
+              <%}%>
+      
+  </form>
+
+</div>
+
+
+
+<%- include('partials/footer') %>

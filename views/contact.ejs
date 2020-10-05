@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<div id="contact-container" >
+ 
+    <div id="contact-form">
+      <h2 class="card-title">Contactez-nous</h2>
+        <div class="background-image">
+    
+      <% if (message.length > 0){ %>
+        <div class="alert-success">
+        <p><%= message %></p>
+        </div>
+      <%}%>
+        
+  <form method="POST" action="/contact">
+    <label class="radio" for="madame">
+          Madame
+    </label>
+        <input class="radio" type="radio" name="gender" id="madame" >
+        
+  
+    <label class="radio" for="monsieur" >
+          Monsieur
+    </label>
+        <input  type="radio" name="gender" id="monsieur" />
+      
+    <label for="name">Votre nom:</label>
+        <input type="text"  name="name" id="name"  minlength="2" maxlength="50"  required />
+        
+        
+    <label for="email">Votre email</label>
+        <input type="email"  id="email" name="email" required/>
+    <!-- <small class='txt3'></small>  -->
+
+    <label for="phone">Si vous souhaitez être rappelé, votre téléphone:</label>
+        <input type="texte"  id="phone" name="phone"/>
+    
+    <p>Votre demande concerne:</p>
+      <label class="radio" for="info">Demande d'informations ou autre</label>
+        <input  type="radio" name="subject" id="info" value="info" required />
+            
+    <label class="radio"for="reservation">Votre réservation</label>
+      <input  type="radio" name="subject" id="reservation" value="reservation" required />
+    <label class="radio" for="recla">Réclamation</label>
+      <input  type="radio" name="subject" id="recla" value="recla" required />
+            
+    <label>Laissez un message</label>
+      <textarea  name="text"  rows="10" cols="30"  required></textarea>
+          
+    <label class="form-check-label" for="pc" ><a href="/CGUPC">Accepter la politique de confidentialité</a></label>
+      <input type="checkbox"  id="pc" required />
+
+    <div>
+      <button type="submit" class="btn">Envoyer</button>
+    </div>
+
+  </form>
+        </div>
+      </div>   
+    </div>
+</div>
+
+
+<!-- <script src="../javascript/controlForm.js"></script> -->
+
+<%- include('partials/footer') %>

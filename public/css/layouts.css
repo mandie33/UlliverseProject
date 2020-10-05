@@ -1,0 +1,232 @@
+:root{
+    --main-bg-color:#fafafa;
+    --secondary-bg-color:#D9D9D9;
+    --secondary-link-color:#21243d;
+    --centered:center;
+    --flex-end:flex-end;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* height: 100vh; */
+}
+body {
+    margin:0;
+    background-color:#fafafa;
+    
+}
+/*HOME PAGE DISPOSITION*/
+#homePage-container {
+    display: inline-grid;
+    grid-template-columns: 33% 33% 34% ;
+    justify-items: var(--centered); 
+    grid-template-rows: 20% 35% 10% 30%;
+    row-gap: 20px;
+    background-color:var(--secondary-bg-color);
+}
+
+#slogan{
+    grid-column:1/span 4;
+    grid-row: 1;
+    justify-self: var(--centered);
+    text-align: var(--centered);
+}
+
+#txt-one,#txt-two,#txt-three,#story{
+  
+    
+    text-align: var(--centered);
+    justify-items:var(--flex-end);
+    align-items: var(--centered);
+    
+}
+#txt-one{
+    grid-column:1;
+    grid-row: 2;
+    width: 33vw;
+}
+#txt-two{
+    grid-column:2/3;
+    grid-row: 2;
+    width:33vw ;
+  
+    
+}
+#txt-three{
+    grid-column:3/4;
+    grid-row: 2;
+    width: 33vw;
+    
+}
+#story{
+    grid-column:1/span 4;
+    grid-row: 4;
+    background-color: var(--main-bg-color);
+}
+
+/*DESTINATION*/
+#destination-container{
+    display: grid;
+    grid-template-columns: repeat(2,50%) ;
+    align-items: var(--centered);
+    justify-items: var(--centered);
+    background-image: -webkit-linear-gradient(70deg, #fafafa  50%, #D9D9D9 50%);
+    } 
+        
+    #dest-container{
+            grid-column: 2;
+            text-align: var(--centered);
+            width: 40vw;
+    }
+
+/*CONTACT*/
+#contact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+   
+    align-items: var(--centered);
+    justify-items: var(--centered);
+    text-align: var(--centered);
+   
+
+}
+
+#contact-form {
+    grid-column: 1/span 4;
+    width: 80%;
+    
+}
+
+/*PANIER*/
+table {
+    margin:auto;
+    height: 50vh;
+   } 
+  
+  tr{
+      margin:auto;
+      display: grid;
+      grid-template-columns: repeat(5,1fr); 
+      grid-template-rows: auto;
+      height: 20vh;
+     align-items: var(--centered); 
+     justify-items: var(--centered);
+     border: ridge 5px ;
+     border-radius: 20px;
+    
+    
+  }
+  tr:nth-child(1){
+    grid-column: 1;
+  }
+  tr:nth-child(2){
+      grid-column: 2;
+  }
+  tr:nth-child(3){
+      grid-column: 3;
+  }
+  tr:nth-child(4){
+      grid-column: 4;
+  }
+  tr:nth-child(5){
+      grid-column: 5;
+  }
+  
+  tbody {
+      grid-column: 2/span 5;
+      grid-row: 3;
+      align-items: var(--centered);
+  }
+  
+  /* PANIER VIDE */
+  
+  #emptyCart{
+      display: flex;
+      justify-content: var(--centered);
+      align-items: var(--centered);
+      height: 78vh;
+      background-image: url("../images/planet.png");
+    background-repeat: no-repeat;
+    background-position:45% 40%;
+  
+  }
+  .emptyCart-title{
+      border: dotted 20px #010A26;
+      width: max-content;
+      padding: 10px;
+    
+      
+  }
+
+/*REGISTER*/
+#login-container,#register-container{
+    display: grid;
+    grid-template-columns: repeat(3,33%) ;
+    grid-template-rows: auto;
+    align-items: var(--centered);
+    justify-items: var(--centered);
+    text-align: var(--centered);
+    height: 82vh;
+    background-image: url("../images/project.png");
+    background-repeat: no-repeat;
+    background-position: var(--centered);
+    background-size: auto;
+
+}
+
+.formRegister{
+    grid-column: 2;
+    grid-row: 2;
+}
+/*LOGIN*/
+.formLogin{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+
+/*ESPACE CLIENT*/
+#account-container {
+    height: 70vh;
+}
+
+.line{
+    border-top:dotted 20px #F2B5A7;
+    width: 50vw;
+    margin: auto;
+}
+#newsletter-container{
+    display: grid;
+    grid-template-columns: repeat(3,33%) ;
+    grid-template-rows: 20%,80%;
+    align-items: var(--centered);
+    justify-items: var(--centered);
+    text-align: var(--centered);
+
+
+}
+
+#newsletter-form{
+    grid-row: 1;
+    grid-column: 2;
+   
+}
+/*PAGE FIN */
+
+#end-container{
+    display: flex;
+    flex-direction: column;
+    align-content: var(--centered);
+    justify-content: var(--centered);
+    height: 88vh;
+    width: 100vw;
+    background-image: url("../images/planet4.png");
+    background-repeat: no-repeat;
+    background-position:30% 40%;
+    
+}
+
+
+.end-title{
+    color:#21243d;
+}

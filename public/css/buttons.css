@@ -1,0 +1,45 @@
+:root{
+  --main-bg-color-btn:#ffc60b;
+  --secondary-text-color:#21243d;
+  --width-btn:max-content;
+  --font-size-btn:1.1rem;
+  --font-family-link:'Fugaz One', cursive;
+}
+#backtotop{
+    display: none;
+    position: fixed;
+    border-radius: 50px;
+    width: var(--width-btn);
+    height:3.5rem;
+    outline: none;
+    bottom: 20px;
+    right: 50px;
+  
+    background-color:var(--main-bg-color-btn) ;
+    font-family: var(--font-family-link);
+    font-size: var(--font-size-btn);
+    
+  } 
+
+  .btn {
+    display: inline-block;
+    width: var(--width-btn);
+    padding: 8px;
+    font-size: var(--font-size-btn);
+    font-family: var(--font-family-link);
+    border-radius: 20px;
+   
+    margin: auto;
+    
+    background-color:var(--main-bg-color-btn)  ;;
+
+    
+  }
+  .btn-cgv{
+      color:var(--secondary-text-color);
+      border-color: #fafafa;
+      background-color: #fafafa;
+      text-decoration-line: underline;
+      text-decoration-color: var(--secondary-text-color);
+
+  }
