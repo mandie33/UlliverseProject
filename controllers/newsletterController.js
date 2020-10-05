@@ -21,7 +21,7 @@ const postNewsletter=(req,res)=>{
     const url="https://us8.api.mailchimp.com/3.0/lists/3534393791";
     const options= {
         method:"POST",//méthode pour envoyer données
-        auth:"mandy:93269b78ca7a3b0cfed759888a8aa012-us8"//username +api key
+        auth:process.env.API_KEY
 
 }
 const request=https.request(url,options,(res)=>{
