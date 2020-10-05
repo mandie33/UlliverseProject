@@ -18,7 +18,7 @@ const postNewsletter=(req,res)=>{
 }
 //objet js à convertir en JSON string
     const jsonData=JSON.stringify(data);
-    const url="https://us8.api.mailchimp.com/3.0/lists/3534393791";
+    const url=process.env.CONNECTION_MAILCHIMP;
     const options= {
         method:"POST",//méthode pour envoyer données
         auth:process.env.API_KEY
